@@ -1,6 +1,6 @@
 # Dom Wise — Private Chef
 
-A responsive, buildless portfolio page for Dom Wise's Boston-area private chef, meal prep, and family chef / nanny services.
+A responsive, buildless portfolio page for Dom Wise's private chef in the Boston area, meal prep, and family chef / nanny services.
 
 ## Run locally
 
