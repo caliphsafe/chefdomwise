@@ -131,6 +131,22 @@
     .about-photo-inset .photo-trigger img { width: 100%; aspect-ratio: 1.05; object-fit: cover; }
     .about-photo-inset figcaption { padding: 6px 2px 7px; color: var(--muted); font: italic 12px var(--display); }
 
+    .experience { padding: clamp(58px,7vw,92px) 0; background: var(--sand); }
+    .experience-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(230px,.55fr); align-items: end; gap: 32px; margin-bottom: 30px; }
+    .experience-head .eyebrow { margin-bottom: 17px; }
+    .experience-head > p { max-width: 360px; margin: 0 0 5px auto; color: #5b564c; font-size: 12px; line-height: 1.85; }
+    .experience-list { border-top: 1px solid rgba(48,62,49,.38); }
+    .experience-item { display: grid; grid-template-columns: 170px minmax(0,1fr); gap: 26px; padding: 20px 0 21px; border-bottom: 1px solid rgba(48,62,49,.25); }
+    .experience-date { padding-top: 4px; color: var(--tomato-dark); font-size: 10px; font-weight: 700; letter-spacing: .1em; line-height: 1.6; text-transform: uppercase; }
+    .experience-role { margin: 0; color: var(--olive); font: 600 28px/1.05 var(--display); letter-spacing: -.025em; }
+    .experience-place { margin: 4px 0 0; color: var(--tomato-dark); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .experience-description { max-width: 810px; margin: 8px 0 0; color: #565247; font-size: 12px; line-height: 1.8; }
+    .experience-item.current { padding-left: 16px; border-left: 3px solid var(--tomato); }
+    .experience-item.current .experience-date::after { display: block; width: max-content; margin-top: 5px; padding: 3px 7px; color: var(--paper-light); background: var(--olive); content: "Current"; font-size: 8px; letter-spacing: .12em; }
+    .experience-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 25px; }
+    .experience-foot > div { padding-top: 14px; border-top: 1px solid rgba(48,62,49,.3); }
+    .experience-foot h3 { margin: 0; color: var(--olive); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .experience-foot p { margin: 6px 0 0; color: #565247; font-size: 11px; line-height: 1.7; }
     .work { padding: clamp(58px,7vw,92px) 0; color: var(--paper-light); background: var(--olive-deep); }
     .work-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(220px,.55fr); align-items: end; gap: 35px; margin-bottom: 30px; }
     .work .eyebrow { color: #e3c47a; margin-bottom: 17px; }
@@ -225,6 +241,8 @@
       .services-head,.work-head { grid-template-columns: 1fr .6fr; gap: 25px; }
       .service-item { grid-template-columns: 34px 30px minmax(160px,.85fr) minmax(170px,1fr) 34px; gap: 14px; }
       .about-grid { grid-template-columns: minmax(0,1fr) minmax(290px,.76fr); gap: 34px; }
+      .experience-head { grid-template-columns: 1fr .6fr; gap: 25px; }
+      .experience-item { grid-template-columns: 142px minmax(0,1fr); gap: 20px; }
       .booking-grid { grid-template-columns: 1fr; gap: 30px; }
       .footer-row { flex-wrap: wrap; }
     }
@@ -262,6 +280,13 @@
       .service-copy { grid-column: 2 / 4; grid-row: 2; padding-top: 5px; }
       .service-link { grid-column: 3; grid-row: 1; width: 31px; height: 31px; }
       .about-grid { grid-template-columns: 1fr; }
+      .experience-head { grid-template-columns: 1fr; gap: 15px; margin-bottom: 25px; }
+      .experience-head > p { margin: 0; }
+      .experience-item { grid-template-columns: 1fr; gap: 5px; padding: 16px 0 17px; }
+      .experience-item.current { padding-left: 11px; }
+      .experience-role { font-size: 26px; }
+      .experience-description { font-size: 11px; }
+      .experience-foot { grid-template-columns: 1fr; gap: 16px; }
       .about-copy > p { font-size: 13px; }
       .about-visual { width: min(100%,460px); margin-top: 4px; }
       .service-photo-strip { display: flex; gap: 10px; margin: 0 -1px 22px; padding: 2px 1px 10px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; }
@@ -309,7 +334,7 @@
         <img class="brand-logo" src="images/dom-wise-logo.png" alt="Dom Wise" width="1774" height="887" decoding="async">
       </a>
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-        <a href="#services">Services</a><a href="#about">About Dom</a><a href="#work">The work</a>
+        <a href="#services">Services</a><a href="#about">About Dom</a><a href="#experience">Experience</a><a href="#work">The work</a>
       </nav>
       <a class="nav-cta" href="#booking">Make an inquiry <svg class="utensil-icon" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M4 2v4.5M7 2v4.5M10 2v4.5M13 2v4.5M4 6.5c0 2.6 2.1 4 4.5 4s4.5-1.4 4.5-4M8.5 10.5V24" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 2c-2 2-3.4 4.5-3.4 7.1 0 2.1 1.2 3.3 3.4 3.3s3.4-1.2 3.4-3.3C23.4 6.5 22 4 20 2ZM20 12.4V24" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
@@ -396,8 +421,7 @@
           <p>Dom Wise brings a steady hand, a curious palate, and a generous sense of hospitality to every kitchen he enters. He is a versatile chef who feels at home across different environments, adapting his approach to the people, pace, and purpose of the meal. For Dom, good cooking starts with paying attention: who is coming to the table, what they enjoy, and how food can make a moment feel more welcoming.</p>
           <p>He currently works at Marzae Cellar + Provisions in Boston’s Haymarket area, continuing to grow his craft in a professional kitchen. Outside that setting, Dom brings thoughtful cooking into private homes through intimate dinners, weekly meal preparation, and family chef support. A dinner at home can be planned around the occasion and the guests; meal preparation can reflect a household’s preferences and the week ahead; family support can be shaped around agreed schedules and responsibilities.</p>
           <p>Working with Dom begins with a conversation rather than a preset menu. He takes time to understand tastes, dietary needs, routines, and the kind of support a household is looking for, then helps make a clear plan. His aim is to make the food feel considered and the experience feel easy—whether that means giving a host more time with guests, bringing order to a busy week, or helping a family feel well looked after.</p>
-          <div class="current-kitchen"><span>Current kitchen</span><div><strong>Marzae Cellar + Provisions</strong><small>Haymarket area · Boston</small></div></div>
-          <p class="resume-note">Career details and culinary specialties are being prepared for a fuller résumé.</p>
+          <div class="current-kitchen"><span>Current kitchen</span><div><strong>Marzae Cellar + Provisions</strong><small>Line Cook · Haymarket area · Boston</small></div></div>
         </div>
         <div class="about-visual" role="group" aria-label="Dom Wise’s culinary work">
           <figure class="about-photo">
@@ -408,6 +432,28 @@
             <button class="photo-trigger " type="button" data-index="5" aria-label="View culinary photograph 06 in the gallery"><img src="https://lh3.googleusercontent.com/d/1u_zMEPcu6SEOJ7bDbCt6ylAatcvKyHQ4=w1200" alt="Sliced steak with greens and roasted vegetables" loading="lazy" decoding="async"></button>
             <figcaption>At the table</figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="experience-head">
+          <div><div class="eyebrow">Culinary experience</div><h2 class="section-heading" id="experience-title">Good work,<br><em>in every kitchen.</em></h2></div>
+          <p>From neighborhood restaurants and specialty food production to private family meals, Dom brings care, flexibility, and a steady rhythm to each service.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item current"><div class="experience-date">July 2026 — Present</div><div><h3 class="experience-role">Line Cook</h3><p class="experience-place">Marzae Cellar + Provisions · Haymarket, Boston</p><p class="experience-description">Prepares locally sourced, farm-fresh ingredients for dinner service, collaborates with the head chef on menu features, and keeps the kitchen clean and organized through a fast-paced service.</p></div></article>
+          <article class="experience-item"><div class="experience-date">September 2022 — Present</div><div><h3 class="experience-role">Private Chef</h3><p class="experience-place">Private family · Boston</p><p class="experience-description">Plans and prepares nutritious lunches and dinners around a family’s routines and children’s preferences. Manages groceries, inventory, kitchen organization, and food safety while inviting children to build confidence through age-appropriate, hands-on cooking.</p></div></article>
+          <article class="experience-item"><div class="experience-date">April 2022 — August 2022</div><div><h3 class="experience-role">Kitchen Team</h3><p class="experience-place">Dragon Pizza · Somerville</p><p class="experience-description">Prepared dough, sauce, fresh ingredients, salads, and toppings for a high-volume kitchen, then cooked pizzas and sides to order with attention to consistency, presentation, and pace.</p></div></article>
+          <article class="experience-item"><div class="experience-date">January 2022 — April 2022</div><div><h3 class="experience-role">Kitchen Team</h3><p class="experience-place">True Bistro · Somerville</p><p class="experience-description">Supported ingredient preparation and garde manger service, made house specialties including crackers and cashew-based cheeses, and photographed dishes and shared seasonal menu content for the restaurant’s social channels.</p></div></article>
+          <article class="experience-item"><div class="experience-date">April 2021 — December 2021</div><div><h3 class="experience-role">Kitchen Team</h3><p class="experience-place">Neighborhood Kitchen · Medford</p><p class="experience-description">Prepared and cooked a broad menu spanning Haitian and Laotian dishes, seafood, grilled meats, sandwiches, and daily favorites. Assisted with garde manger, live lobster preparation, and kitchen production during busy service.</p></div></article>
+          <article class="experience-item"><div class="experience-date">September 2019 — August 2020</div><div><h3 class="experience-role">Prepared Foods & Catering</h3><p class="experience-place">Formaggio Kitchen · Cambridge</p><p class="experience-description">Produced prepared foods for retail and catering, including roasted chickens, breakfast items, signature sandwiches, cheese-driven macaroni and cheese, and fresh salads. Helped keep displays stocked and quality consistent across departments.</p></div></article>
+          <article class="experience-item"><div class="experience-date">May 2016 — September 2016</div><div><h3 class="experience-role">Oyster & Kitchen Support</h3><p class="experience-place">Tapestry · Boston</p><p class="experience-description">Maintained oyster freshness through careful storage and rotation, shucked to order, and supported fry and garde manger stations with precision, food safety, and teamwork.</p></div></article>
+        </div>
+        <div class="experience-foot">
+          <div><h3>Education</h3><p>Montana State University · September 2009–January 2010</p></div>
+          <div><h3>Training & additional skills</h3><p>ServSafe certified · First Aid/CPR certified · Social media and food photography</p></div>
         </div>
       </div>
     </section>
@@ -528,7 +574,7 @@
       <a class="brand" href="#top" aria-label="Dom Wise, return to top">
         <img class="brand-logo" src="images/dom-wise-footer-logo.png" alt="Dom Wise" width="554" height="883" decoding="async">
       </a>
-      <nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#work">The work</a></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">The work</a></nav>
       <span class="copyright">© <span id="year">2026</span> Dom Wise</span>
     </div>
   </footer>
